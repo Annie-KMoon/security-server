@@ -25,6 +25,7 @@ jobs:
             set -e
             cd /home/ubuntu/security-server-study
             git pull origin main
+            chmod 766 gradlew
             ./gradlew clean build
             sudo fuser -k -n tcp 8080 || true
             nohup java -jar build/libs/*SNAPSHOT.jar > ./security.log 2>&1 &
