@@ -23,7 +23,7 @@ jobs:
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script: |
             set -e
-            cd /home/ubuntu/security-server-study
+            cd /home/ubuntu/security-server
             git pull origin main
             chmod 766 gradlew
             ./gradlew clean build
